@@ -7,7 +7,7 @@ export const API_OPTIONS = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkOGU5NzBjYzY3ZjcxNTQ4OGU5MjUzMjZmNTE2NWVkYiIsInN1YiI6IjY2MGQwM2M3YzhhNWFjMDE3YzdhYzk0OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.QyZj0LmdakZbfncVFO8nsiqfF2CqC8_L9lmtAoyB9NY'
+    Authorization: 'Bearer '+ process.env.REACT_APP_TMDB_API_TOKEN
   }
 };
 
@@ -28,4 +28,4 @@ export const LANGUAGE = [
   }
 ]
 
-export const OPENAI_KEY = "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"
+export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY
