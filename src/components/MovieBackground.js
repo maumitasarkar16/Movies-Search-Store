@@ -3,7 +3,6 @@ import {  useSelector } from 'react-redux';
 import useMovieBackground from '../hooks/useMovieBackground';
 
 const MovieBackground = ({movieId}) => {
-  console.log("movieId---", movieId)
 
   useMovieBackground(movieId)
 

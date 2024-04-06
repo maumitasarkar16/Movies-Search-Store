@@ -6,6 +6,7 @@ import { auth } from '../utils/firebase';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
 import { AVATAR_URL } from '../utils/constant';
+import { BG_IMAGE } from '../utils/constant';
 
 const Login = () => {
     const dispatch = useDispatch()
@@ -26,9 +27,6 @@ const Login = () => {
 
     const handleSubmitForm = (e) => {
         e.preventDefault();
-        // console.log("Name----", name)
-        // console.log("Email----", email)
-        // console.log("Password----", password)
 
         if (isSignInForm) {
             //Login 
@@ -40,7 +38,7 @@ const Login = () => {
                 .then((userCredential) => {
                     // Signed in 
                     const user = userCredential.user;
-                    //console.log("old user===", user)
+            
                     updateProfile(user, {
                         photoURL: AVATAR_URL
                     }).then(() => {
@@ -50,7 +48,7 @@ const Login = () => {
                     }).catch((error) => {
                         seterrorMessage(error.message)
                     });
-                    //console.log("new user===", user)
+                
                 })
                 .catch((error) => {
                     const errorCode = error.code;
@@ -105,7 +103,7 @@ const Login = () => {
     return (
         <div>
             <Header />
-            <div className="absolute"><img src="https://assets.nflxext.com/ffe/siteui/vlv3/7ca5b7c7-20aa-42a8-a278-f801b0d65fa1/c5f327aa-25b9-4f32-8004-02fa7082c853/SG-en-20240326-popsignuptwoweeks-perspective_alpha_website_large.jpg" alt="bg-login" /></div>
+            <div className="absolute"><img src={BG_IMAGE} alt="bg-login" /></div>
 
             <form className="w-3/12 absolute bg-black p-12 my-36 mx-auto right-0 left-0 text-white bg-opacity-80">
                 <h2 className="text-3xl font-bold py-4">{isSignInForm ? 'Sign In' : 'Sign Up'}</h2>
