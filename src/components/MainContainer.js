@@ -10,7 +10,7 @@ const MainContainer = () => {
 
   if (movieList === null) return;
 
-  const filteredMovie = movieList[13];
+  const filteredMovie = movieList[0];
 
   return (
     <div className='pt-[40%] bg-black md:pt-0'>
