@@ -12,13 +12,13 @@ const ShowPopUpTrailer = ({ movieTitle, movieOverview, closeModalChild }) => {
     return (
         <div>
            
-            <div className="fixed top-0 mx-[120px] mt-[120px] left-0 z-50 justify-center items-center w-full">
-                <div className="relative p-4 w-full max-w-2xl max-h-full">
+            <div className="fixed top-0  md:mx-[150px] md:mt-[150px] left-0 z-50 justify-center items-center md:w-full">
+                <div className="relative w-96  p-4 md:w-full md:max-w-2xl md:max-h-full">
 
                     <div className="relative bg-black rounded-lg shadow dark:bg-gray-900">
 
                         <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                            <h3 className="text-xl font-semibold text-gray-400 dark:text-white">
+                            <h3 className="text-sm md:text-xl font-semibold text-gray-400 dark:text-white">
                                 {movieTitle}
                             </h3>
                             <button onClick={closeModalHandle} type="button" className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" >
@@ -28,11 +28,11 @@ const ShowPopUpTrailer = ({ movieTitle, movieOverview, closeModalChild }) => {
                             </button>
                         </div>
 
-                        <div className="p-4 md:p-5 space-y-4 flex">
+                        <div className="p-4 md:p-5 space-y-4 flex ">
 
                             <iframe className='w-screen aspect-video'  src={"https://www.youtube.com/embed/" + movieTrailer?.key + "?&autoplay=1&mute=1&controls=0&showinfo=0&autohide=1&modestbranding=1"} title="Official Trailer"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  ></iframe>
                             
-                            <p className="leading-relaxed text-gray-500 dark:text-gray-400 p-2 m-2 text-sm">
+                            <p className="leading-relaxed text-gray-500 dark:text-gray-400 p-2 m-2 text-sm hidden md:inline-block">
                                {movieOverview}
                             </p>
                         </div>

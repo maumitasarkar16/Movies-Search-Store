@@ -7,7 +7,7 @@ const SearchMovies = () => {
   return (
     <div>
       <div className="fixed -z-10">
-        <img src={BG_IMAGE} alt="bg-login" />
+        <img className='h-screen w-screen object-cover -mt-5' src={BG_IMAGE} alt="bg-login" />
       </div>
       <div>
         <SearchMoviesInput />

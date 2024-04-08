@@ -103,10 +103,10 @@ const Login = () => {
     return (
         <div>
             <Header />
-            <div className="absolute"><img src={BG_IMAGE} alt="bg-login" /></div>
+            <div className="absolute "><img className='h-screen w-screen object-cover' src={BG_IMAGE} alt="bg-login" /></div>
 
-            <form className="w-3/12 absolute bg-black p-12 my-36 mx-auto right-0 left-0 text-white bg-opacity-80">
-                <h2 className="text-3xl font-bold py-4">{isSignInForm ? 'Sign In' : 'Sign Up'}</h2>
+            <form className="w-full md:w-3/12 absolute bg-black p-12 my-36 mx-auto right-0 left-0 text-white bg-opacity-80">
+                <h2 className="text-xl md:text-3xl font-bold py-4">{isSignInForm ? 'Sign In' : 'Sign Up'}</h2>
 
                 {/* {!isSignInForm && <input type="text" name="name" placeholder="Full Name" value={name} className="p-4 my-3 w-full bg-gray-700 rounded-lg border-[1px] border-slate-300" onChange={handleName} />}
                 <input type="text" name="email" placeholder="Email Address" value={email} className="p-4 my-3 w-full bg-gray-700 rounded-lg border-[1px] border-slate-300" onChange={handleEmail} />

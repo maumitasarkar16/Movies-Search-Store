@@ -18,7 +18,7 @@ const ShowInfoModal = ({ closeModalChild }) => {
         <div>
            
             <div className="fixed top-0 mx-[120px] mt-[120px] left-0 z-50 justify-center items-center w-full">
-                <div className="relative p-4 w-full max-w-2xl max-h-full">
+                <div className="relative p-4 md:w-full md:max-w-2xl md:max-h-full">
 
                     <div className="relative bg-black rounded-lg shadow dark:bg-gray-700">
 

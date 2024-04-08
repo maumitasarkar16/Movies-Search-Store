@@ -16,12 +16,12 @@ const MovieTitle = ({ movieTitle, movieOverview, moviePoster }) => {
     return (
         <div>
 
-            <div className='mx-28'>
-                <h2 className='font-bold text-3xl font-sans py-2 my-2 text-white'>{movieTitle}</h2>
-                <p className='py-2 my-2 text-sm text-white font-bold w-1/2'>{itCanOverflow ? beginText + "..." : beginText}</p>
-                <div>
-                    <button className='py-[15px] px-[50px]  bg-slate-200 text-black rounded-lg text-lg hover:bg-opacity-50 font-bold' >Play</button>
-                    <button className='py-[15px] px-[50px] mx-2 bg-gray-500 text-white rounded-lg text-lg hover:bg-opacity-50 font-bold' onClick={showModalHandle}>Info</button>
+            <div className='md:mx-28 py-14 my-14 md:py-6 md:my-6'>
+                <h2 className='text-lg font-bold md:text-3xl font-sans  text-white'>{movieTitle}</h2>
+                <p className='py-2 my-2 text-sm text-white font-bold w-1/2 hidden md:inline-block'>{itCanOverflow ? beginText + "..." : beginText}</p>
+                <div className='flex'>
+                    <button className='py-[2px] px-[15px] md:py-[15px] md:px-[50px]  bg-slate-200 text-black rounded-lg text-lg hover:bg-opacity-50 font-bold' >Play</button>
+                    <button className='py-[2px] px-[15px] md:py-[15px] md:px-[50px] mx-2 bg-gray-500 text-white rounded-lg text-lg hover:bg-opacity-50 font-bold hidden md:inline-block' onClick={showModalHandle}>Info</button>
                 </div>
             </div>
 

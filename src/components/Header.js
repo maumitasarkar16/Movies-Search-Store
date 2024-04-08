@@ -69,18 +69,18 @@ const Header = () => {
 
     return (
         <div>
-            <div className='absolute bg-gradient-to-b from-black px-[130px] py-2 z-10 w-screen flex justify-between'>
-                <img src={LOGO} alt="header" height="500px" width="180px" />
+            <div className='absolute -mt-2 bg-gradient-to-b from-black px-8 py-2  z-10 w-screen flex flex-col md:flex-row justify-between'>
+                <img className="mx-auto md:mx-0" src={LOGO} alt="header" height="500px" width="180px" />
 
-                {user && (<div className=' m-4 flex cursor-pointer'>
+                {user && (<div className=' m-4 flex cursor-pointer justify-between'>
 
-                   {isShowSearch && (<select onChange={handleLanguageOfSearch} className='bg-gray-700 text-white px-2  -my-1 rounded-lg'>
+                   {isShowSearch && (<select onChange={handleLanguageOfSearch} className='bg-gray-700 text-white px-2  md:-my-0.5 rounded-lg text-sm '>
                         {LANGUAGE.map( op => <option key={op.identifier} value={op.value}>{op.value}</option>)}
                    </select> )}  
 
-                    <button className='bg-purple-800 text-white rounded-lg p-2 mx-2 -my-0.5' onClick={handleSearchMovies} >{ isShowSearch ? "Home Page" : "Search Movies"} </button>
-                    <img className="h-12 w-12" src={user.photoURL !== null ? user.photoURL : USER_ICON} alt="user-icon" />
-                    <button className='text-white font-bold ' onClick={handleSignOut}>(Sign Out)</button>
+                    <button className='bg-purple-800 text-white rounded-lg p-2 md:p-2 mx-2 md:-my-0.5 text-sm ' onClick={handleSearchMovies} >{ isShowSearch ? "Home Page" : "Search Movies"} </button>
+                    <img className="h-12 w-12 hidden md:block" src={user.photoURL !== null ? user.photoURL : USER_ICON} alt="user-icon" />
+                    <button className='text-white font-bold text-sm ' onClick={handleSignOut}>(Sign Out)</button>
                 </div>)}
 
                

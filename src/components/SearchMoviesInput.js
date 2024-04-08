@@ -70,8 +70,8 @@ const SearchMoviesInput = () => {
 
   return (
     // <div className="pt-[35%] flex justify-center "> 
-     <div className='w-1/2 pt-[15%] my-2 mx-auto'> 
-      <form className='w-full grid grid-cols-12' onSubmit={(e) => e.preventDefault()}>
+     <div className='w-full pt-[55%] md:w-1/2 md:pt-[15%] my-2 mx-auto'> 
+      <form className='grid grid-cols-12' onSubmit={(e) => e.preventDefault()}>
         <input className='col-span-9 border border-gray-700 p-2' ref={movieInput} id="movieLookupInput" name="movieLookupInput" type="text" placeholder={lang[langKey].searchPlaceholder} />
         <button type="submit" className='bg-red-700 rounded-sm text-white col-span-3 p-2 my-0 mx-1' onClick={handleSearchClick}>{lang[langKey].searchBtn}</button>
       </form>

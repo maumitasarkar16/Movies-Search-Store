@@ -10,12 +10,12 @@ const MainContainer = () => {
 
   if (movieList === null) return;
 
-  const filteredMovie = movieList[8];
+  const filteredMovie = movieList[13];
 
   return (
-    <div className=''>
+    <div className='pt-[40%] bg-black md:pt-0'>
       <FilteredMovieContext.Provider value={{ filteredMovie }}>
-        <div className="w-screen aspect-video pt-[15%] px-6 absolute bg-gradient-to-r from-black"><MovieTitle movieTitle={filteredMovie.title} movieOverview={filteredMovie.overview} moviePoster={filteredMovie.poster_path} /></div>
+        <div className=" w-screen aspect-video md:pt-[15%] px-6 absolute bg-gradient-to-r from-black"><MovieTitle movieTitle={filteredMovie.title} movieOverview={filteredMovie.overview} moviePoster={filteredMovie.poster_path} /></div>
         <div className=''><MovieBackground movieId={filteredMovie.id} /></div>
       </FilteredMovieContext.Provider>
     </div>
